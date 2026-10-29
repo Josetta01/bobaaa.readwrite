@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bobaaa.readwrite | Book & Music Aesthetics</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config for Lilac Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        lilac: {
+                            50: '#fcf9fd',
+                            100: '#f5ebfa',
+                            200: '#ebd4f4',
+                            300: '#dfb4ea',
+                            400: '#cd8add',
+                            500: '#b861cc',
+                            600: '#9b45af',
+                            700: '#7f368f',
+                            800: '#692e74',
+                            900: '#57295f',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for soft gradients and glassmorphism */
+        body {
+            background-color: #fcf9fd; /* lilac-50 */
+            color: #4a4a4a;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #b861cc, #9b45af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden antialiased">
+
+    <!-- Decorative Background Blobs -->
+    <div class="blob bg-lilac-300 w-96 h-96 rounded-full top-0 left-[-10%] mix-blend-multiply"></div>
+    <div class="blob bg-lilac-200 w-96 h-96 rounded-full top-[20%] right-[-5%] mix-blend-multiply"></div>
+    <div class="blob bg-purple-200 w-[30rem] h-[30rem] rounded-full bottom-[-10%] left-[20%] mix-blend-multiply"></div>
+
+    <!-- Navigation / Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 glass-card">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight text-lilac-700 hover:text-lilac-500 transition-colors">
+                bobaaa.readwrite
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#admins" class="hover:text-lilac-600 transition-colors">Admins</a>
+                <a href="#reading" class="hover:text-lilac-600 transition-colors">Currently Reading</a>
+                <a href="#songs" class="hover:text-lilac-600 transition-colors">Songs</a>
+                <a href="#posts" class="hover:text-lilac-600 transition-colors">Latest Posts</a>
+            </nav>
+            <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" rel="noopener noreferrer" 
+               class="bg-gradient-to-r from-lilac-400 to-lilac-600 text-white px-5 py-2.5 rounded-full shadow-md shadow-lilac-200 hover:shadow-lg hover:from-lilac-500 hover:to-lilac-700 transition-all transform hover:-translate-y-0.5 flex items-center gap-2 font-medium">
+                <i class="fab fa-instagram text-lg"></i> Follow Us
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 min-h-[70vh] flex flex-col justify-center items-center text-center animate-fade-in-up">
+        <div class="max-w-3xl mx-auto mt-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-lilac-100 text-lilac-700 font-semibold text-sm mb-6 border border-lilac-200">
+                Welcome to our aesthetic corner ✨
+            </span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-800 tracking-tight">
+                Reading, writing & <br/> <span class="text-gradient">everything aesthetic.</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-10 max-w-xl mx-auto leading-relaxed">
+                Dive into our world of books, carefully curated playlists, and soft lilac vibes. Curated with love by the admins of bobaaa.readwrite.
+            </p>
+            <a href="#admins" class="text-lilac-600 hover:text-lilac-800 transition-colors text-3xl animate-bounce inline-block">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Admins Section -->
+    <section id="admins" class="py-24 px-6 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet the Admins</h2>
+                <div class="h-1 w-24 bg-lilac-400 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Admin 1 -->
+                <div class="glass-card rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:shadow-lilac-100 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <img src="https://placehold.co/200x200/dfb4ea/ffffff?text=Admin+1" alt="Admin 1" class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
+                        <div class="absolute -bottom-2 -right-2 bg-lilac-500 text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-white shadow-sm">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Admin Name One</h3>
+                    <p class="text-lilac-600 font-medium mb-4 text-sm uppercase tracking-wide">Co-Founder & Reader</p>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Lover of fantasy realms, late-night reading sessions, and finding the perfect matcha latte. Believes every good book deserves an equally good playlist.
+                    </p>
+                </div>
+
+                <!-- Admin 2 -->
+                <div class="glass-card rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:shadow-lilac-100 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <img src="https://placehold.co/200x200/cd8add/ffffff?text=Admin+2" alt="Admin 2" class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
+                        <div class="absolute -bottom-2 -right-2 bg-lilac-500 text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-white shadow-sm">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Admin Name Two</h3>
+                    <p class="text-lilac-600 font-medium mb-4 text-sm uppercase tracking-wide">Co-Founder & Writer</p>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Constantly drafting new stories in the notes app. Obsessed with romance tropes, soft lilac aesthetics, and capturing memories through polaroids.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently Reading Section -->
+    <section id="reading" class="py-24 px-6 bg-white/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Currently Reading</h2>
+                    <div class="h-1 w-24 bg-lilac-400 rounded-full"></div>
+                </div>
+                <p class="text-gray-500 mt-4 md:mt-0 max-w-sm text-right hidden md:block">
+                    What's currently on our nightstands and capturing our imaginations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Book 1 -->
+                <div class="group perspective">
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:shadow-lilac-200 transition-all duration-300 border border-lilac-50">
+                        <div class="relative overflow-hidden rounded-xl mb-6 aspect-[2/3]">
+                            <img src="https://placehold.co/400x600/ebd4f4/9b45af?text=Harry+Potter\nand+the\nSorcerer's+Stone" alt="Harry Potter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur text-lilac-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                Reading
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 leading-tight mb-1">Harry Potter and the Sorcerer's Stone</h4>
+                        <p class="text-lilac-600 text-sm font-medium">J.K. Rowling</p>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="group perspective lg:mt-8">
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:shadow-lilac-200 transition-all duration-300 border border-lilac-50">
+                        <div class="relative overflow-hidden rounded-xl mb-6 aspect-[2/3]">
+                            <img src="https://placehold.co/400x600/f5ebfa/7f368f?text=Book+Cover\nPlaceholder+2" alt="Book 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 leading-tight mb-1">The Aesthetic Placeholder Title</h4>
+                        <p class="text-lilac-600 text-sm font-medium">Author Name</p>
+                    </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="group perspective sm:hidden lg:block">
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl hover:shadow-lilac-200 transition-all duration-300 border border-lilac-50">
+                        <div class="relative overflow-hidden rounded-xl mb-6 aspect-[2/3]">
+                            <img src="https://placehold.co/400x600/dfb4ea/57295f?text=Book+Cover\nPlaceholder+3" alt="Book 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 leading-tight mb-1">Another Great Read</h4>
+                        <p class="text-lilac-600 text-sm font-medium">Author Name</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Songs Section -->
+    <section id="songs" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">On Our Playlist</h2>
+                <div class="h-1 w-24 bg-lilac-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">Songs that perfectly capture our current mood and aesthetic. Press play and vibe with us.</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <!-- Song 1 -->
+                <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-lilac-200 to-lilac-400 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
+                        <i class="fas fa-music text-white text-xl z-10"></i>
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Car Lights</h4>
+                        <p class="text-gray-500 text-sm">James Marriott</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
+                        <i class="fas fa-play ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Song 2 -->
+                <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
+                        <i class="fas fa-compact-disc text-white text-xl z-10 animate-[spin_4s_linear_infinite] opacity-80"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Line Without A Hook</h4>
+                        <p class="text-gray-500 text-sm">Ricky Montgomery</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
+                        <i class="fas fa-play ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Song 3 -->
+                <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow">
+                        <i class="fas fa-headphones-alt text-white text-xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Aesthetic Placeholder Track</h4>
+                        <p class="text-gray-500 text-sm">Indie Artist</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
+                        <i class="fas fa-play ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts / Instagram Feed -->
+    <section id="posts" class="py-24 px-6 bg-white/60 backdrop-blur-sm border-t border-lilac-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <i class="fab fa-instagram text-4xl text-lilac-500 mb-4 inline-block"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest on the Gram</h2>
+                <div class="h-1 w-24 bg-lilac-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600">@bobaaa.readwrite</p>
+            </div>
+
+            <!-- Instagram Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+                <!-- Post 1 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
+                    <img src="https://placehold.co/600x600/f5ebfa/9b45af?text=Instagram\nPost+1" alt="Post 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 124</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 12</span>
+                    </div>
+                </a>
+                
+                <!-- Post 2 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
+                    <img src="https://placehold.co/600x600/ebd4f4/7f368f?text=Instagram\nPost+2" alt="Post 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 89</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 5</span>
+                    </div>
+                </a>
+
+                <!-- Post 3 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100 hidden md:block">
+                    <img src="https://placehold.co/600x600/dfb4ea/57295f?text=Instagram\nPost+3" alt="Post 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 201</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 24</span>
+                    </div>
+                </a>
+                
+                <!-- Post 4 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
+                    <img src="https://placehold.co/600x600/cd8add/ffffff?text=Instagram\nPost+4" alt="Post 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 156</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 18</span>
+                    </div>
+                </a>
+
+                <!-- Post 5 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
+                    <img src="https://placehold.co/600x600/b861cc/ffffff?text=Instagram\nPost+5" alt="Post 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 342</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 41</span>
+                    </div>
+                </a>
+
+                <!-- Post 6 -->
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100 hidden md:block">
+                    <img src="https://placehold.co/600x600/9b45af/ffffff?text=Instagram\nPost+6" alt="Post 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
+                        <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 110</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 8</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Follow Button -->
+            <div class="text-center">
+                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-3 bg-gradient-to-r from-lilac-500 to-lilac-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-lilac-300 hover:shadow-xl hover:-translate-y-1 hover:from-lilac-600 hover:to-lilac-800 transition-all duration-300">
+                    <i class="fab fa-instagram text-xl"></i> Follow us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-lilac-100 py-10 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-xl font-bold text-lilac-700 mb-4">bobaaa.readwrite</h2>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://www.instagram.com/bobaaa.readwrite/" class="text-gray-400 hover:text-lilac-600 transition-colors text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-lilac-600 transition-colors text-2xl">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-lilac-600 transition-colors text-2xl">
+                    <i class="fab fa-goodreads-g"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2026 bobaaa.readwrite. All aesthetic rights reserved. 
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Sticky header background transition
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm', 'bg-white/80');
+                header.classList.remove('glass-card');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-white/80');
+                header.classList.add('glass-card');
+            }
+        });
+    </script>
+</body>
+</html>
