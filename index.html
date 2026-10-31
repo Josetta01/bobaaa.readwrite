@@ -183,9 +183,9 @@
 
             <div class="space-y-16">
                 <!-- Admin 1's Reading List -->
-                <div class="bg-white/40 rounded-3xl p-6 md:p-8 border border-lilac-100 shadow-sm relative">
-                    <div class="flex items-center gap-4 mb-8">
-                        <img src="https://scontent.fhkg10-1.fna.fbcdn.net/v/t69.46293-2/879346502_1140784931738967_7229994187983688722_n.?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=942482&_nc_ohc=8MoYTgnXthAQ7kNvwEfBpIM&_nc_oc=AdrGpMzl4nVlp4LKagmfswVgmXGPz4CBSgIEfiXl4t-vQU2WOs8eJMSEAe81DFmDSow&_nc_ad=z-m&_nc_cid=0&_nc_zt=28&_nc_ht=scontent.fhkg10-1.fna&_nc_gid=YZvb9BAwio551OUd0cozhA&_nc_ss=7f22e&oh=03_Q7cD6wHanf3trpmzA7fWcslqNL7ybAl8sW12TT3AHpSgpRZqpg&oe=6AE73B69" class="w-14 h-14 rounded-full shadow-sm border-2 border-white" alt="Admin 1">
+                        <div class="bg-white/40 rounded-3xl p-6 md:p-8 border border-lilac-100 shadow-sm relative">
+                                <div class="flex items-center gap-4 mb-8">
+                                                    <img src="https://scontent.fhkg1-1.fna.fbcdn.net/v/t69.46293-2/882287009_1463142272401556_7535822827978985632_n.?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=942482&_nc_ohc=rxaWtYfr9jsQ7kNvwEFJLXO&_nc_oc=AdqXkfdLswXHVgNlrfX5EXuxWGhccoc0DTzlBTSUeCFqUlBGEURwtf96hRkSOFnVk8Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=28&_nc_ht=scontent.fhkg1-1.fna&_nc_gid=3RbpFelAq-D5LK-NC73qZQ&_nc_ss=7f22e&oh=03_Q7cD6wHxC4MbZB0UEjok8lxlEj_leNAuhxsKAYvUFZSvSrc78A&oe=6AE7489C" alt="Admin 1">
                         <h3 class="text-2xl font-bold text-gray-800">jta's Shelf</h3>
                     </div>
                     
@@ -300,20 +300,21 @@
 
             <div class="flex flex-col gap-4">
                 <!-- Song 1 -->
-                <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
-                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-lilac-200 to-lilac-400 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
-                        <img class="https://i.scdn.co/image/ab67616d0000b27380abafe342cae196fcbc0f7a"></i>
-                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Car Lights</h4>
-                        <p class="text-gray-500 text-sm">James Marriott</p>
-                    </div>
-                    <button class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
-                        <i class="fas fa-play ml-1"></i>
-                    </button>
-                </div>
-
+               <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
+    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-lilac-200 to-lilac-400 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
+        <!-- Changed class to src, added object-cover to fit the image properly, and removed the stray </i> tag -->
+        <img src="https://i.scdn.co/image/ab67616d0000b27380abafe342cae196fcbc0f7a" alt="Album Cover" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    </div>
+    <div class="flex-grow">
+        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Car Lights</h4>
+        <p class="text-gray-500 text-sm">James Marriott</p>
+    </div>
+    <!-- Changed <button> to <a>, added href for Spotify link, and target="_blank" -->
+    <a href="https://open.spotify.com/search/Car%20Lights%20James%20Marriott" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
+        <i class="fas fa-play ml-1"></i>
+    </a>
+</div>
                 <!-- Song 2 -->
                 <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
                     <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
