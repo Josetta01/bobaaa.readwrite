@@ -313,19 +313,22 @@
     </a>
 </div>
                 <!-- Song 2 -->
-                <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
-                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
-                        <img class="https://i.kfs.io/album/global/5178897,3v1/fit/500x500.jpg"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Shut Up And Dance</h4>
-                        <p class="text-gray-500 text-sm">Walk The Moon</p>
-                    </div>
-                    <button class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
-                        <i class="fas fa-play ml-1"></i>
-                    </button>
-                </div>
-
+                <!-- Song 2 -->
+<div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
+    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow relative overflow-hidden">
+        <!-- Changed class to src, added object-cover, and removed stray </i> -->
+        <img src="https://i.kfs.io/album/global/5178897,3v1/fit/500x500.jpg" alt="Album Cover" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    </div>
+    <div class="flex-grow">
+        <h4 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-lilac-700 transition-colors">Shut Up And Dance</h4>
+        <p class="text-gray-500 text-sm">Walk The Moon</p>
+    </div>
+    <!-- Changed <button> to <a> with Spotify search link -->
+    <a href="https://open.spotify.com/search/Shut%20Up%20And%20Dance%20Walk%20The%20Moon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-lilac-50 text-lilac-600 flex items-center justify-center hover:bg-lilac-600 hover:text-white transition-colors mr-2">
+        <i class="fas fa-play ml-1"></i>
+    </a>
+</div>
                 <!-- Song 3 -->
                 <div class="glass-card rounded-2xl p-4 flex items-center gap-6 hover:bg-white/90 transition-colors group cursor-pointer border border-lilac-100 hover:border-lilac-300">
                     <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-200 to-lilac-300 flex items-center justify-center shadow-inner group-hover:shadow-md transition-shadow">
@@ -356,8 +359,8 @@
             <!-- Instagram Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
                 <!-- Post 1 -->
-                <a href="https://www.instagram.com/bobaaa.readwrite/" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
-                    <img src="https://www.instagram.com/p/DaZ1MeWkzAY/?utm_source=ig_web_copy_link&rpxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" alt="Post 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <a href="https://www.instagram.com/p/DaZ1MeWkzAY/?utm_source=ig_web_button_share_sheet&dlrf=MzRlODBiNWFlZA==" target="_blank" class="relative group aspect-square overflow-hidden rounded-2xl bg-lilac-100">
+                    <img src="https://www.instagram.com/p/DaZ1MeWkzAY/?utm_source=ig_web_button_share_sheet&dlrf=MzRlODBiNWFlZA== alt="Post 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white font-semibold text-lg">
                         <span class="flex items-center gap-2"><i class="fas fa-heart"></i> 124</span>
                         <span class="flex items-center gap-2"><i class="fas fa-comment"></i> 12</span>
